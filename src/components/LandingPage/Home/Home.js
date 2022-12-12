@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
-import SectionsCont from "../Sections/SectionsCont";
+import Latest from "../Sections/Movies/Latest";
 //import Footer from "../Footer/Footer";
 import "./Home.css"
 
@@ -9,7 +9,7 @@ function Home() {
     <div className="Home">
          <Header />
          <Hero />
-         <SectionsCont />
+         <Latest />
         
     </div>
   );
