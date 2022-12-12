@@ -1,0 +1,30 @@
+.hero_text_cont {
+  position: absolute;
+  top: 158px;
+  left: 98px;
+  gap: 16px;
+  width: 404px;
+  height: 285px;
+}
+
+.hero_text_h1 {
+  color: #F9F9F9;
+}
+
+.hero_text_p {
+  color: #F9F9F9;
+}
+
+.hero_text_btn {
+  background: #00B9AE;
+  color: #F9F9F9;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.hero_image {
+ display: flex;
+ justify-content: center;
+ border-radius: 20px;
+}
