@@ -2,23 +2,17 @@ import './SectionsCard.css';
 
 
 export default function SectionsCard({ movie }) {
-  const {id, poster_path , backdrop_path, original_title,  overview } = movie
+  const {path , backdrop_path, original_title,  overview } = movie
   
   return (
-    <div id={id}>
-          <div class="container text-center">
-            <div class="row align-items-start">
-              <div class="col">
-                   <div class="card" style={{width:"18rem"}}>
-                        <img src={poster_path + backdrop_path} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                          <h5 class="card-title">{original_title}</h5>
-                          <p class="card-text">{overview}</p>
-                        </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-    </div>
+           <div className="card_container">
+              <div className="card" style={{width:"18rem"}}>
+                  <img src={"https://image.tmdb.org/t/p/w500" + backdrop_path} alt={path} />
+                      <div className="card-body">
+                         <h5 className="card-title">{original_title}</h5>
+                          <p className="card-text">{overview}</p>
+                      </div>
+                 </div>
+           </div>
   );
 }
