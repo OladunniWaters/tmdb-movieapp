@@ -1,9 +1,9 @@
 import './Latest.css';
 import React, { useEffect, useState } from "react";
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+//import 'slick-carousel/slick/slick.css'
+//import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
-//import {FaChevronLeft, FaChevronRight} from 'react-icons'
+
 
 
 export default function Latest() {
@@ -24,7 +24,7 @@ useEffect(() => {
 }, []);
 
   const sliderSettings = {
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 4,
@@ -37,7 +37,7 @@ useEffect(() => {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
@@ -62,16 +62,15 @@ useEffect(() => {
     <div className="latest">
        <h1 className="latestHeader">Latest Movies</h1>
   
-  
+
       <Slider {...sliderSettings}>
             {popular.map((movie) => (
-              <div key={movie.id} className="card">
+              <div key={movie.id} className="card_cont">
                  <div>
-                      <img src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path} alt={movie.path} />                 
+                      <img className="card-image" src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path} alt={movie.path} />                 
                  </div>
-                 <div>
-                       <h2>{movie.original_title}</h2>
-                       <p>{movie.vote_average}</p>
+                  <h2 className="original_title">{movie.original_title}</h2>
+                  <div className="card-info">
                        <p>{movie.release_date}</p> 
                  </div>
 

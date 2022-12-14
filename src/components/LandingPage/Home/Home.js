@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 import Latest from "../Sections/Movies/Latest";
-//import Footer from "../Footer/Footer";
+import Footer from "../Footer/Footer";
 import "./Home.css"
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
          <Header />
          <Hero />
          <Latest />
-        
+         <Footer />
     </div>
   );
 }
