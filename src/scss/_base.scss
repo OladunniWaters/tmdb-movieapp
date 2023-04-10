@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* LIGHT MODE Variables */
+:root{
+  --color-bg: #FBFBFB;
+  --color-text:  #000;
+  --color-portfolio-text:  #fff;
+  --color-icon:  #000;
+  --color-skill-bg:  rgba(242, 247, 251, 0.08);
+  --color-skill-border:  rgba(242, 247, 251, 0.25);
+  --color-skill-color:  #F2F7FB;
+  
+;
+
+  /* ======= neumorphic ======== */
+  --neu-light: rgba(211, 211, 211, 0.2);
+  --neu-dark: rgba(0,0,0,.2);
+}
+  
+  /* ========= Dark Theme Variable ========== */
+[data-theme = "dark"]{
+  --color-text:  #fff;
+  --color-bg: #000; 
+  --color-button-bg: #E50914;
+  --color-button-text:  #fff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.app{
+  background: var(--color-bg);
+   color: var(--color-text);
+}
+
+html, body, .app{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+@media only screen and (min-width: 280px) and (max-width: 1080px){
+  html, 
+  body,
+  .app{
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .app::webkit-scrollbar{
+    display: none;
+  }
+}
+

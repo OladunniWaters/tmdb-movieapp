@@ -10,7 +10,7 @@ export default function Details() {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=40c5472500254014bc0441252e3b37ac&language=en-US`)
     .then(response => response.json())
     .then(data => {
-      setItem(data.results[0])
+      setItem(data)
     })
 
     
