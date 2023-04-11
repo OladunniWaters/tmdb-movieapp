@@ -1,6 +1,6 @@
 import React from "react";
 import './Row.scss'
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Thumbnail from "../thumbnail/Thumbnail";
 
 import  { Navigation } from 'swiper';
@@ -43,19 +43,23 @@ export default function Row() {
 
 
         breakpoints={{
-          "@0.00": {
+          320: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 60,
           },
-          "@0.75": {
+          577: {
             slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 3,
             spaceBetween: 40,
           },
-          "@1.50": {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1025: {
             slidesPerView: 6,
             spaceBetween: 50,
           },

@@ -9,7 +9,7 @@
 
 }
 //large
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 992px, 1024px) {
 
 }
 //extra large
@@ -17,3 +17,8 @@
 }
 
 --color-red: #E50914;
+{
+    background: linear-gradient(270deg,transparent,rgba(0,0,0,.85) 65%);
+}
+
+  box-shadow: 0 0 10px #E50914, 0 0 40px #E50914, 0 0 80px #E50914;
