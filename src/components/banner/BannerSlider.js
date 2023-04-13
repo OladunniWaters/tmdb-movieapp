@@ -7,7 +7,7 @@ import { FaPlay } from 'react-icons/fa';
 
 
 export default function BannerSlider({banner}) {
-  const {id, original_title, backdrop_path, path, overview } = banner
+  const {id, original_title, backdrop_path, path, overview  } = banner
   let navigate = useNavigate();
   return (
       <> 

@@ -1,6 +1,7 @@
 // src/redux/store.js
 import { configureStore } from "@reduxjs/toolkit";
 import { favoriteReducer } from "./favoriteSlice";
+
 import storage from 'redux-persist/lib/storage';
 import {
   persistStore,
