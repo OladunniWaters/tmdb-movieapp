@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  movie: [],
+  movies: []
 };
 
 export const movieSlice = createSlice({
@@ -9,15 +9,14 @@ export const movieSlice = createSlice({
   initialState,
   reducers: {
     addMovie: (state, action) => {
-      state.movie = action.payload;
+      state.movies = action.payload;
     },
 
-    postdata: (state, action) => {},
- 
-    }
+    postdata: (state, action) => {}
+  }
 });
 
-// Action creators are generated for each case reducer function
-export const { addMovie, postdata} = movieSlice.actions;
 
-export const movieReducer = movieSlice.reducer;
+export const { addMovie, postdata } = movieSlice.actions;
+
+export default movieSlice.reducer;

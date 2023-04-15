@@ -3,6 +3,8 @@ import './Details.scss'
 import { useState } from "react";
 import { useParams  } from "react-router-dom";
 import { FaStar } from 'react-icons/fa';
+import  { useNavigate } from "react-router-dom";
+
 
 export default function Details() {
 
@@ -15,6 +17,7 @@ export default function Details() {
      setItem(data) 
     })
 
+ let navigate = useNavigate();
 
   return (
     <>
@@ -38,7 +41,7 @@ export default function Details() {
                                                 <p className="detail_overview">{item.overview}</p>
                                                 
                                                 <div className='detail_btn_cont'>
-                                                   <button className='detail_play_btn'>Play</button>
+                                                   <button onClick={() => {navigate(`/${id}`)}} className='detail_play_btn'>Play</button>
                                                    <div>
                                                       {item.vote_average}
                                                       <FaStar />
@@ -57,8 +60,19 @@ export default function Details() {
                                                   {item.spoken_languages.map((spoken) => spoken.english_name + ", ")}
                                                 </p>
                                                 
+                                                
+                                                                                            <ReactPlayer
+                                              url={`https://www.youtube.com/watch?v=${videos.key}`}
+                                              controls
+                                              width="400"
+                                              height="360"
+                                            />
+                                             
+                                         
+                                                
                                          */}       
-                                           </div>      
+                                         
+                                         </div>      
                                           
                                      </div>     
                                  </div> 
