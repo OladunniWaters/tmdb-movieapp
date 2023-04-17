@@ -71,15 +71,17 @@ export default function Details() {
                                                    
                                                      {open &&  (
                                                         <div className='detail_video_cont'>
-                                                           <button className='detail_close_btn' onClick={() => setOpen(false)}>Close</button>     
-                                                          <iframe src={`https://www.youtube.com/embed/${trailer.key}`} width={500} height={300} title='A youtube video on React hooks'>
-                                                          </iframe>      
+                                                           <div className='iframe_cont'>                                                      <button className='detail_close_btn' onClick={() => setOpen(false)}>Close</button>  
+                                                              <iframe 
+                                                                  src={`https://www.youtube.com/embed/${trailer.key}`}  
+                                                                  title='trailer'
+                                                                  className='detail_video'
+                                                                  >
+                                                              </iframe>  
+                                                            </div>  
                                                         </div>                                                
                                                         )}
                                                 </div>
-                                                
-
-                                                
 
                                          </div>      
                                           
