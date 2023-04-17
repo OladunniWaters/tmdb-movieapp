@@ -12,7 +12,7 @@ export default function BannerSlider({banner}) {
   return (
       <> 
 
-           <div className="banner" key={id} onClick={() => {navigate(`/${id}`)}}>
+           <div className="banner" key={id}>
               <img className='banner_image' src={"https://image.tmdb.org/t/p/w500" + backdrop_path} alt={path} />
             
              <div className="banner_shadow">
@@ -21,7 +21,7 @@ export default function BannerSlider({banner}) {
                 <h3 className="banner_title">{original_title}</h3>
                 <p className="banner_overview">{overview.slice(0, 150)}..</p>
                 
-                <div className='banner_btn_cont'>
+                <div className='banner_btn_cont' onClick={() => {navigate(`/${id}`)}}>
                    <button className='banner_play_btn'><FaPlay className='banner_play_icon'/>Play</button>
                    <button className='banner_info_btn'>More Information</button>
                 </div>

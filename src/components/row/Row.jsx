@@ -36,7 +36,7 @@ export default function Row() {
     
     <>
       <div className='container'>
-    
+        <span>POPULAR</span>
         <Swiper
         navigation={true} 
         modules={[Navigation]} 

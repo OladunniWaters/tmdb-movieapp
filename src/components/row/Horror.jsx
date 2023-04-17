@@ -12,9 +12,9 @@ import "swiper/scss/navigation";
 
 
 
-const apiUrl = "https://api.themoviedb.org/3/movie/popular?api_key=40c5472500254014bc0441252e3b37ac&language=en-US&page=1";
+const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key=40c5472500254014bc0441252e3b37ac&language=en-US&page=1&with_genres=27";
 
-export default function Row() {
+export default function Horror() {
   
  //RECIPE FUNCTION
   const [movies, setMovies] = useState([]);
@@ -36,7 +36,7 @@ export default function Row() {
     
     <>
       <div className='container'>
-    
+        <span>HORROR</span>
         <Swiper
         navigation={true} 
         modules={[Navigation]} 

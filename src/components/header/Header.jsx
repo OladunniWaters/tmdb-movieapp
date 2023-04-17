@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className='header'>
        <div className='header_cont'>
-           <p className='header_logo'>WATERS</p>
+          <p className='header_logo'>WATERS</p>
             <ul className='header_list_cont'>
                <li className='header_list'>HOME</li>
                <li className='header_list'>MOVIES</li>

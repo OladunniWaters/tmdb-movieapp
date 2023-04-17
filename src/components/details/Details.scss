@@ -70,7 +70,7 @@ height: 100vh;
 }
 //extra large
   position: absolute;
-  background: linear-gradient(270deg,transparent,rgba(0,0,0,.85) 65%);
+  background: rgba(0,0,0,.85) ;
   width: 100vw;
   height: 100vh;
   top: 0px;
@@ -107,7 +107,6 @@ left: 60px;
 position: absolute;
 width: 100vw;
 top: 100px;
-left: 80px;
 }
 
 
@@ -154,8 +153,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 200px;
-height: 305px;
+width: 500px;
+height: 700px;
 box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 border-radius: 6px;
 overflow: hidden;
@@ -186,8 +185,8 @@ border-top-right-radius: 6px;
 border-top-left-radius: 6px;
 }
 //extra large
-width: 200px;
-height: 400px;
+width: 500px;
+height: 700px;
 border-top-right-radius: 6px;
 border-top-left-radius: 6px;
 }
@@ -215,8 +214,9 @@ align-items: center;
 }
 //extra large
 display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
+gap: 100px;
 }
 
 
@@ -237,10 +237,172 @@ align-items: center;
 //extra large
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: left;
 flex-direction: column;
-width: 500px;
+width: 550px;
 }
+
+
+.detail_title_cont {
+  //small
+@media screen and (min-width: 320px) and (max-width: 576px) {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+// medium
+@media screen and (min-width: 577px) and (max-width: 768px) {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+//large
+@media screen and (min-width: 769px) and (max-width: 992px) {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+//extra large
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.detail_title {
+  //small
+@media screen and (min-width: 320px) and (max-width: 576px) {
+font-size: 15px;
+}
+// medium
+@media screen and (min-width: 577px) and (max-width: 768px) {
+font-size: 25px;
+}
+//large
+@media screen and (min-width: 769px) and (max-width: 992px) {
+font-size: 25px;
+}
+//extra large
+font-size: 35px;
+}
+
+
+.detail_star_cont{
+  //small
+@media screen and (min-width: 320px) and (max-width: 576px) {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+margin-top: -10px;
+}
+// medium
+@media screen and (min-width: 577px) and (max-width: 768px) {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+margin-top: -10px;
+}
+//large
+@media screen and (min-width: 769px) and (max-width: 992px) {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+margin-top: -10px;
+}
+//extra large
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+margin-top: -10px;
+}
+
+
+.detail_star{
+  //small
+@media screen and (min-width: 320px) and (max-width: 576px) {
+color: var(--color-button-bg);
+margin-top: -5px;
+margin-left: 15px;
+font-size: 28px;
+}
+// medium
+@media screen and (min-width: 577px) and (max-width: 768px) {
+color: var(--color-button-bg);
+margin-top: -5px;
+margin-left: 15px;
+font-size: 28px;
+}
+//large
+@media screen and (min-width: 769px) and (max-width: 992px) {
+color: var(--color-button-bg);
+margin-top: -5px;
+margin-left: 15px;
+font-size: 28px;
+}
+//extra large
+color: var(--color-button-bg);
+margin-top: -5px;
+margin-left: 15px;
+font-size: 28px;
+}
+
+
+.detail_genre {
+  //small
+@media screen and (min-width: 320px) and (max-width: 576px) {
+margin-left: 10px;
+}
+// medium
+@media screen and (min-width: 577px) and (max-width: 768px) {
+margin-left: 10px;
+}
+//large
+@media screen and (min-width: 769px) and (max-width: 992px) {
+margin-left: 10px;
+}
+//extra large
+margin-left: 10px;
+}
+
+
+.detail_play_btn {
+  //small
+@media screen and (min-width: 320px) and (max-width: 576px) {
+
+}
+// medium
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+}
+//large
+@media screen and (min-width: 769px) and (max-width: 992px, 1024px) {
+
+}
+//extra large
+border-radius: 30px;
+width: 80px;
+height: 30px;
+padding: 2px 4px;
+font-size: 16px;
+background: var(--color-button-bg);
+color: var(--color-button-text);
+text-align: center;
+border: none;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+  box-shadow: 0 0 10px #E50914, 0 0 20px #E50914, 0 0 60px #E50914;
+}
+
+
+
+
+
+
 
 
 

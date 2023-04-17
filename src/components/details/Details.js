@@ -3,13 +3,14 @@ import './Details.scss'
 import { useState } from "react";
 import { useParams  } from "react-router-dom";
 import { FaStar } from 'react-icons/fa';
-import ReactPlayer from 'react-player';
+//import ReactPlayer from 'react-player';
 
 
 
 export default function Details() {
-
+  const [ open , setOpen ] = useState(false)
   const [ item , setItem ] = useState([])
+  const [trailer, setTrailer] = useState(null);
   const { id } = useParams();   
   
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=40c5472500254014bc0441252e3b37ac&language=en-US&append_to_response=videos,similar,credits`)
@@ -23,18 +24,6 @@ export default function Details() {
         setTrailer(trailerid ? trailerid : data.videos.results[0]);
      } )
       
-    
-    
-    
-  const [ open , setOpen ] = useState(false)
-
-  const videoDisplay = () => {
-        setOpen(true);
-    };
-    
-    
-     const [trailer, setTrailer] = useState(null); 
-    
 
 
   return (
@@ -51,31 +40,47 @@ export default function Details() {
                                 <div className="container  detail_body_cont">
                                     <div className='detail_body'>
                                          <div className='detail_image_cont'>
-                                          <img className='detail_image' src={"https://image.tmdb.org/t/p/w500" + item.poster_path} alt="..." />
+                                             <img className='detail_image' src={"https://image.tmdb.org/t/p/w500" + item.poster_path} alt="..." />
                                           </div>
                                      
                                            <div className='detail_info'>
-                                                <h3 className="detail_title">{item.original_title}</h3>
+                                                <div className='detail_title_cont'> 
+                                                    <h3 className="detail_title">{item.original_title}</h3>
+                                                    <div className='detail_star_cont'>
+                                                          {item.vote_average}
+                                                          <FaStar className='detail_star'/>
+                                                    </div>
+                                                 </div>
+                                                
+                                                
                                                 <p className="detail_overview">{item.overview}</p>
+                                                <div>
+                                                   <span>Genre:</span>
+                                                {item.genres &&
+                                                     item.genres.slice(0, 5).map((genre, i) => (
+                                                        <span className='detail_genre' key={i}>
+                                                          {genre.name}
+                                                        </span>
+                                                      ))}
+                                                </div>
+
+                                                
                                                 
                                                 <div className='detail_btn_cont'>
-                                                   <button onClick={videoDisplay} className='detail_play_btn'>PLAY</button>
+                                                   <button onClick={() => setOpen(true)} className='detail_play_btn'>PLAY TRAILER</button>
                                                    
-                                                     {open && (
-
-                                                                
-                                                          <iframe src={`https://www.youtube.com/embed/${trailer.key}`} width={500} height={300} title='A youtube video on React hooks'></iframe>      
-                                                                                                        
+                                                     {open &&  (
+                                                        <div className='detail_video_cont'>
+                                                           <button className='detail_close_btn' onClick={() => setOpen(false)}>Close</button>     
+                                                          <iframe src={`https://www.youtube.com/embed/${trailer.key}`} width={500} height={300} title='A youtube video on React hooks'>
+                                                          </iframe>      
+                                                        </div>                                                
                                                         )}
-                                                   
-                                                   
-                                                   
-                                                   <div>
-                                                      {item.vote_average}
-                                                      <FaStar />
-                                                  </div>
                                                 </div>
-                                         
+                                                
+
+                                                
+
                                          </div>      
                                           
                                      </div>     
