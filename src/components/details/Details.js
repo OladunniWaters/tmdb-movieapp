@@ -31,6 +31,7 @@ export default function Details() {
 
          {
               (!item) ? `404 NOT FOUND ${id}` : (
+                    <div className='detail_trailer_cont'>
                         <div key={item.id} className='detail'> 
 
                            <img className='detail_image_bkg' src={"https://image.tmdb.org/t/p/w500" + item.backdrop_path} alt="..." />
@@ -38,7 +39,7 @@ export default function Details() {
                              <div className="detail_shadow">
                              
                                 <div className="container  detail_body_cont">
-                                    <div className='detail_body'>
+                                    <div className='  detail_body'>
                                          <div className='detail_image_cont'>
                                              <img className='detail_image' src={"https://image.tmdb.org/t/p/w500" + item.poster_path} alt="..." />
                                           </div>
@@ -57,39 +58,36 @@ export default function Details() {
                                                 <div>
                                                    <span>Genre:</span>
                                                 {item.genres &&
-                                                     item.genres.slice(0, 5).map((genre, i) => (
+                                                     item.genres.slice(0, 3).map((genre, i) => (
                                                         <span className='detail_genre' key={i}>
                                                           {genre.name}
                                                         </span>
                                                       ))}
                                                 </div>
 
-                                                
-                                                
-                                                <div className='detail_btn_cont'>
-                                                   <button onClick={() => setOpen(true)} className='detail_play_btn'>PLAY TRAILER</button>
-                                                   
-                                                     {open &&  (
-                                                        <div className='detail_video_cont'>
-                                                           <div className='iframe_cont'>                                                      <button className='detail_close_btn' onClick={() => setOpen(false)}>Close</button>  
-                                                              <iframe 
-                                                                  src={`https://www.youtube.com/embed/${trailer.key}`}  
-                                                                  title='trailer'
-                                                                  className='detail_video'
-                                                                  >
-                                                              </iframe>  
-                                                            </div>  
-                                                        </div>                                                
-                                                        )}
-                                                </div>
-
-                                         </div>      
-                                          
+                                             <button onClick={() => setOpen(true)} className='detail_play_btn'>PLAY TRAILER</button>
+                                         </div>    
+                 
                                      </div>     
                                  </div> 
                            </div>  
-                             
                         </div>
+                        
+                          {open && (
+                                 <div className='detail_video_cont'>
+                                    <div className='iframe_cont'>
+                                       <button className='detail_close_btn' onClick={() => setOpen(false)}>Close</button>  
+                                          <iframe 
+                                             src={`https://www.youtube.com/embed/${trailer.key}`}  
+                                             title='trailer'
+                                              className='detail_video'
+                                            >
+                                            </iframe>  
+                                        </div>     
+                                     </div>   
+                          )}
+                        
+                  </div>      
                 )
             }
 
