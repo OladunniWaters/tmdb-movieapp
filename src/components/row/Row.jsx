@@ -23,7 +23,7 @@ export default function Row() {
     const url = apiUrl 
     const response = await fetch(url)
     const data = await response.json();
-    setMovies(data.results);
+    setMovies(data.results); 
   }
   
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function Row() {
     
     <>
       <div className='container'>
-        <span>POPULAR</span>
+        <span className='movie_header'>POPULAR</span>
         <Swiper
         navigation={true} 
         modules={[Navigation]} 

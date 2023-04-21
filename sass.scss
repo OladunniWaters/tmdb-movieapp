@@ -22,3 +22,11 @@
 }
 
   box-shadow: 0 0 10px #E50914, 0 0 40px #E50914, 0 0 80px #E50914;
+  
+  
+  .card:hover {
+  transform: scale(1.05);
+}
+
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;

@@ -156,6 +156,7 @@ background: var(--color-button-bg);
 color: var(--color-button-text);
 text-align: center;
 border: none;
+display: none;
 }
 // medium
 @media screen and (min-width: 577px) and (max-width: 768px) {

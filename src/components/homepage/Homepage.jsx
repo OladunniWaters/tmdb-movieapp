@@ -7,7 +7,6 @@ import Banner from '../banner/Banner';
 
 
 export default function Homepage() {
-
   return (
    <> 
      <Banner />

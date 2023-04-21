@@ -36,7 +36,7 @@ export default function Horror() {
     
     <>
       <div className='container'>
-        <span>HORROR</span>
+        <span className='movie_header'>HORROR</span>
         <Swiper
         navigation={true} 
         modules={[Navigation]} 

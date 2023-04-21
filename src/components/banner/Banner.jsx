@@ -6,7 +6,7 @@ import  {  Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 
-const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key=40c5472500254014bc0441252e3b37ac&language=en-US&page=1&with_genres=18, 35, 14";
+const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key=40c5472500254014bc0441252e3b37ac&language=en-US&page=1&with_genres=18";
 
 export default function Banner() {
   

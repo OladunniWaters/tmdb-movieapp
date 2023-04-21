@@ -36,7 +36,7 @@ export default function Adventure() {
     
     <>
       <div className='container'>
-        <span>ADVENTURE</span>
+        <span className='movie_header'>ADVENTURE</span>
         <Swiper
         navigation={true} 
         modules={[Navigation]} 

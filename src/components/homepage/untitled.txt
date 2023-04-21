@@ -3,9 +3,9 @@ import "./Thumbnail.scss";
 import  { useNavigate } from "react-router-dom";
 import { FaStar } from 'react-icons/fa';
 
-//import { LazyLoadImage } from 'react-lazy-load-image-component';
-//import Card from '../placeholder/Card';
-///import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Card from '../placeholder/Card';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 export default function Thumbnail({movie}) {
@@ -15,7 +15,16 @@ export default function Thumbnail({movie}) {
       <> 
 
            <div className="thumbnail" key={id} onClick={() => {navigate(`/${id}`)}}>
-             <img className='thumbnail_image' src={"https://image.tmdb.org/t/p/w500" + poster_path} alt={path} />   
+          <LazyLoadImage
+              alt="demonstration1"
+              placeholder={<Card/>}
+              width = {100}
+              height = {100}
+              src={"https://picsum.photos/id/235/500/500"}
+        />
+     
+              <img className='thumbnail_image' src={"https://image.tmdb.org/t/p/w500" + poster_path} alt={path} />
+            
              <div className="">
                 <div className="thumbnail_rating">
                     {vote_average}
