@@ -2,6 +2,7 @@ import React from "react";
 import './Row.scss'
 import { useState, useEffect } from "react";
 import Thumbnail from "../thumbnail/Thumbnail";
+import RowPL from '../placeholder/RowPL';
 
 import  { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,7 +17,7 @@ const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key=40c547250025
 
 export default function Horror() {
   
-
+  const [loading, setLoading] = useState(true)
   const [movies, setMovies] = useState([]);
  
   const fetchMovie = async () => {
@@ -27,8 +28,10 @@ export default function Horror() {
   }
   
   useEffect(() => {
+    setTimeout(() => setLoading(false), 9000) 
     fetchMovie();
   }, [])
+
   
 
   
@@ -64,7 +67,7 @@ export default function Horror() {
             spaceBetween: 50,
           },
         }}>
-                   {movies.map(movie => (
+                   {loading ? <RowPL/> :   movies.map(movie => (
                    <SwiperSlide key={movie.id} >
                        <Thumbnail
                           movie={movie}

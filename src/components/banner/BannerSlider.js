@@ -5,7 +5,6 @@ import { FaPlay } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
  import 'react-lazy-load-image-component/src/effects/opacity.css';
 
-//              <img className='banner_image' src={"https://image.tmdb.org/t/p/w500" + backdrop_path} alt={path} />
 
 export default function BannerSlider({banner}) {
   const {id, original_title, backdrop_path, path, overview  } = banner

@@ -1,6 +1,8 @@
 import React from "react";
 import './Banner.scss';
 import BannerSlider from "./BannerSlider";
+import BannerPL from '../placeholder/BannerPL';
+
 import {  useState, useEffect } from "react";
 import  {  Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,7 +12,7 @@ const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key=40c547250025
 
 export default function Banner() {
   
- //RECIPE FUNCTION
+  const [loading, setLoading] = useState(true)
   const [banners, setBanners] = useState([]);
  
   const fetchBanner = async () => {
@@ -21,9 +23,10 @@ export default function Banner() {
   }
   
   useEffect(() => {
+    setTimeout(() => setLoading(false), 5000) 
     fetchBanner();
   }, [])
-  
+
 
   
   return (
@@ -40,7 +43,7 @@ export default function Banner() {
             modules={[Autoplay]}
             className="mySwiper"
           > 
-                               {banners.map(banner => (
+                              {loading ? <BannerPL/> :  banners.map(banner => (
                                  <SwiperSlide key={banner.id} >
                                      <BannerSlider 
                                         banner={banner}

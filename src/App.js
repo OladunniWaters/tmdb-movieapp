@@ -7,6 +7,7 @@ import {BrowserRouter as HashRouter, Routes, Route} from "react-router-dom";
 import  {useState} from 'react';
 
 
+
 function App() {
     const [theme, setTheme] = useState("dark")
     const changeTheme = () =>{
@@ -14,7 +15,6 @@ function App() {
   }
   
 
-  
   
   return (
     <div className="app" data-theme={theme} changeTheme={changeTheme}>

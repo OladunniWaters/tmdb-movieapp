@@ -2,6 +2,7 @@ import React from "react";
 import './Row.scss'
 import { useState, useEffect } from "react";
 import Thumbnail from "../thumbnail/Thumbnail";
+import RowPL from '../placeholder/RowPL';
 
 import  { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,8 +17,8 @@ const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key=40c547250025
 
 export default function Adventure() {
   
-
-  const [movies, setMovies] = useState([]);
+   const [loading, setLoading] = useState(true)
+   const [movies, setMovies] = useState([]);
  
   const fetchMovie = async () => {
     const url = apiUrl 
@@ -27,6 +28,7 @@ export default function Adventure() {
   }
   
   useEffect(() => {
+    setTimeout(() => setLoading(false), 11000) 
     fetchMovie();
   }, [])
   
@@ -64,7 +66,7 @@ export default function Adventure() {
             spaceBetween: 50,
           },
         }}>
-                   {movies.map(movie => (
+                   {loading ? <RowPL/> :   movies.map(movie => (
                    <SwiperSlide key={movie.id} >
                        <Thumbnail
                           movie={movie}

@@ -2,6 +2,8 @@ import React from "react";
 import './Row.scss'
 import { useState, useEffect } from "react";
 import Thumbnail from "../thumbnail/Thumbnail";
+import RowPL from '../placeholder/RowPL';
+
 
 import  { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,17 +18,18 @@ const apiUrl = "https://api.themoviedb.org/3/movie/popular?api_key=40c5472500254
 
 export default function Row() {
   
-
+  const [loading, setLoading] = useState(true)
   const [movies, setMovies] = useState([]);
  
   const fetchMovie = async () => {
     const url = apiUrl 
     const response = await fetch(url)
     const data = await response.json();
-    setMovies(data.results); 
+    setMovies(data.results);
   }
   
   useEffect(() => {
+    setTimeout(() => setLoading(false), 7000) 
     fetchMovie();
   }, [])
   
@@ -64,7 +67,7 @@ export default function Row() {
             spaceBetween: 50,
           },
         }}>
-                   {movies.map(movie => (
+                   {loading ? <RowPL/> : movies.map(movie => (
                    <SwiperSlide key={movie.id} >
                        <Thumbnail
                           movie={movie}
