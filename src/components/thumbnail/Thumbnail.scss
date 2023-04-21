@@ -12,6 +12,8 @@ position: relative;
 overflow: hidden;
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
   cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
   .thumbnail:hover {

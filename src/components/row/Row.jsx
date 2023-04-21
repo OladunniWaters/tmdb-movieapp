@@ -16,7 +16,7 @@ const apiUrl = "https://api.themoviedb.org/3/movie/popular?api_key=40c5472500254
 
 export default function Row() {
   
- //RECIPE FUNCTION
+
   const [movies, setMovies] = useState([]);
  
   const fetchMovie = async () => {

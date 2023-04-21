@@ -1,4 +1,33 @@
 .card_img {
-  width: 200px;
+  width: 250px;
   height: 305px;
+}
+
+.banner_cont {
+  margin-bottom: 50px;
+}
+
+.card_cont {
+  margin-bottom: 20px;
+}
+
+.banner_card_img {
+  //small
+@media screen and (min-width: 320px) and (max-width: 576px) {
+width: 100vw;
+height: 400px;
+}
+// medium
+@media screen and (min-width: 577px) and (max-width: 768px) {
+width: 100vw;
+height: 600px;
+}
+//large
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+width: 100vw;
+height: 700px;
+}
+//extra large
+width: 100vw;
+height: 700px;
 }

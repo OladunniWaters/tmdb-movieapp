@@ -1,11 +1,13 @@
 import React from "react";
 import './Card.scss';
 
-export default function Card() {
+export default function Card({fake}) {
+const {id} = fake
+
 
   return (
-<div class="card" aria-hidden="true">
-        <div class="card-text placeholder-glow">
+<div class="card card_cont" aria-hidden="true" key={id}>
+        <div class=" placeholder-glow">
           <span class="placeholder card_img"></span>
       </div>            
    </div>                

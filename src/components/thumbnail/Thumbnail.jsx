@@ -3,9 +3,7 @@ import "./Thumbnail.scss";
 import  { useNavigate } from "react-router-dom";
 import { FaStar } from 'react-icons/fa';
 
-//import { LazyLoadImage } from 'react-lazy-load-image-component';
-//import Card from '../placeholder/Card';
-///import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 export default function Thumbnail({movie}) {

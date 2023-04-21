@@ -16,7 +16,7 @@ const apiUrl = "https://api.themoviedb.org/3/discover/movie?api_key=40c547250025
 
 export default function Horror() {
   
- //RECIPE FUNCTION
+
   const [movies, setMovies] = useState([]);
  
   const fetchMovie = async () => {
