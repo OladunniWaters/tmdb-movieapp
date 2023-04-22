@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
 import './Homepage.scss';
 import Row from '../row/Row';
 import Horror from '../row/Horror';

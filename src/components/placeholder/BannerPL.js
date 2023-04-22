@@ -2,7 +2,6 @@ import React from "react";
 import BannerCard from "./BannerCard";
 import FakeData from '../placeholder/FakeData'
 
-import {  useState, useEffect } from "react";
 import  {  Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";

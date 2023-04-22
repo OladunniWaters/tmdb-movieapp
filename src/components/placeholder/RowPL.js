@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import Card from "../placeholder/Card";
 import FakeData from '../placeholder/FakeData'
 

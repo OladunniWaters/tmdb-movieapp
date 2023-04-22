@@ -14,7 +14,7 @@ export default function BannerSlider({banner}) {
 
            <div className="banner" key={id}>
                   <LazyLoadImage
-              alt="demonstration2"
+              alt={path}
               effect="opacity"
               className='banner_image'
               src={"https://image.tmdb.org/t/p/w500" + backdrop_path}
