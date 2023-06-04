@@ -4,7 +4,8 @@ import Details from "./components/details/Details";
 import Footer from "./components/footer/Footer";
 import "./App.css";
 import {BrowserRouter as HashRouter, Routes, Route} from "react-router-dom";
-import  {useState} from 'react';
+import  { useState, useEffect  } from 'react';
+import ReactGA from 'react-ga';
 
 
 
@@ -14,6 +15,10 @@ function App() {
     theme === "dark" ? setTheme("light") : setTheme("dark")
   }
   
+    useEffect(() => {
+ReactGA.initialize('381278357');
+ReactGA.pageview(window.location.pathname + window.location.search)
+},[]);
 
   
   return (
